@@ -4,9 +4,15 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 app.use(express.json());
-app.use(cors({
-  origin: 'https://signature-generator-meloria.netlify.app/',
-}));
+
+app.use(
+  cors({
+    origin: 'https://signature-generator-meloria.netlify.app',
+    methods: ['GET', 'POST'],
+    credentials: false,
+  })
+);
+
 app.set('view engine', 'ejs');
 app.set('views', './views');
 
