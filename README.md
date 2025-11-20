@@ -43,5 +43,75 @@ package.json
 
 1. Clone the repo:
 
-git clone <your-backend-repo-url>
+git clone https://github.com/brian-belaj/signature-generator-backend.git
 cd outlook-signature-generator
+
+2. Install dependencies:
+
+npm install
+
+
+3. Set the port in your `server.js` or via environment variable (Render sets `PORT` automatically):
+
+const port = process.env.PORT || 3000;
+
+
+4. Start the server:
+
+node server
+
+5. The backend will run on `http://localhost:3000` by default.
+
+---
+
+## CORS Configuration
+
+Make sure to configure CORS properly in `server.js` to allow your frontend domain, e.g.:
+
+const cors = require('cors');
+app.use(cors({
+origin: 'https://your-frontend.netlify.app',
+methods: ['GET', 'POST'],
+}));
+
+
+---
+
+## Deployment
+
+- Recommended platforms: Render, Railway, Heroku
+- Configure root directory if needed (if backend is inside a subfolder)
+- Ensure the server listens to `process.env.PORT`
+- Commit + push to GitHub and connect your repo to the deployment service
+
+---
+
+## API Endpoints
+
+- `POST /generate-signature/without-photo`:  
+  Accepts JSON body with user/company data, returns `{ html: "<generated html>" }`
+- `POST /generate-signature/with-photo`:  
+  Similar, but supports photo URLs  
+
+---
+
+## Contribution
+
+Contributions are welcome. Please follow code style and test before submitting pull requests.
+
+---
+
+## License
+
+MIT License
+
+---
+
+## Contact
+
+Open an issue for questions or support, or contact the project maintainer directly.
+
+---
+
+Thank you for using the Outlook Signature Generator backend!
+
