@@ -22,38 +22,34 @@ app.post('/generate-signature/without-photo', (req, res) => {
     personName,
     personRole,
     personMobile,
-    personMobileFormatted,
     personEmail,
     companyLogoUrl,
     companyColor,
     companyName,
     companyAddress,
-    companyCap,
-    companyVat,
     companyPhone,
-    companyPhoneFormatted,
     companyWebsite
   } = req.body;
 
-  res.render('signature-without-photo', {
-    personName,
-    personRole,
-    personMobile,
-    personMobileFormatted,
-    personEmail,
-    companyLogoUrl,
-    companyColor,
-    companyName,
-    companyAddress,
-    companyCap,
-    companyVat,
-    companyPhone,
-    companyPhoneFormatted,
-    companyWebsite
-  }, (err, html) => {
-    if (err) return res.status(500).json({ error: 'Errore generazione firma senza foto' });
-    res.json({ html }); // restituisce solo HTML, niente salvataggio
-  });
+  res.render(
+    'signature-without-photo',
+    {
+      personName,
+      personRole,
+      personMobile,
+      personEmail,
+      companyLogoUrl,
+      companyColor,
+      companyName,
+      companyAddress,
+      companyPhone,
+      companyWebsite
+    },
+    (err, html) => {
+      if (err) return res.status(500).json({ error: 'Errore generazione firma senza foto' });
+      res.json({ html });
+    }
+  );
 });
 
 // Endpoint generazione firma con foto
@@ -62,42 +58,36 @@ app.post('/generate-signature/with-photo', (req, res) => {
     personName,
     personRole,
     personMobile,
-    personMobileFormatted,
     personEmail,
     companyLogoUrl,
     companyColor,
     companyName,
     companyAddress,
-    companyCap,
-    companyVat,
     companyPhone,
-    companyPhoneFormatted,
     companyWebsite,
-    photoBackgroundUrl,
     photoForegroundUrl
   } = req.body;
 
-  res.render('signature-with-photo', {
-    personName,
-    personRole,
-    personMobile,
-    personMobileFormatted,
-    personEmail,
-    companyLogoUrl,
-    companyColor,
-    companyName,
-    companyAddress,
-    companyCap,
-    companyVat,
-    companyPhone,
-    companyPhoneFormatted,
-    companyWebsite,
-    photoBackgroundUrl,
-    photoForegroundUrl
-  }, (err, html) => {
-    if (err) return res.status(500).json({ error: 'Errore generazione firma con foto' });
-    res.json({ html }); // restituisce solo HTML
-  });
+  res.render(
+    'signature-with-photo',
+    {
+      personName,
+      personRole,
+      personMobile,
+      personEmail,
+      companyLogoUrl,
+      companyColor,
+      companyName,
+      companyAddress,
+      companyPhone,
+      companyWebsite,
+      photoForegroundUrl
+    },
+    (err, html) => {
+      if (err) return res.status(500).json({ error: 'Errore generazione firma con foto' });
+      res.json({ html });
+    }
+  );
 });
 
 app.listen(port, () => {
