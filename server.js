@@ -46,7 +46,7 @@ app.post('/generate-signature/without-photo', (req, res) => {
       companyWebsite
     },
     (err, html) => {
-      if (err) return res.status(500).json({ error: 'Errore generazione firma senza foto' });
+      if (err) return res.status(500).json({ error: 'Error generating signature without photo', details: err.message });
       res.json({ html });
     }
   );
@@ -84,12 +84,12 @@ app.post('/generate-signature/with-photo', (req, res) => {
       photoForegroundUrl
     },
     (err, html) => {
-      if (err) return res.status(500).json({ error: 'Errore generazione firma con foto' });
+      if (err) return res.status(500).json({ error: 'Error generating signature with photo', details: err.message });
       res.json({ html });
     }
   );
 });
 
 app.listen(port, () => {
-  console.log(`Server avviato su http://localhost:${port}`);
+  console.log(`Server started on http://localhost:${port}`);
 });
