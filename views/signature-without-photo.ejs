@@ -1,287 +1,116 @@
 <table
+  width="600pt"
+  cellpadding="0"
+  cellspacing="0"
+  style="font-family: Verdana; color: #01548b"
+>
+  <tbody>
+    <tr>
+      <!-- Logo + Nome e Ruolo -->
+      <td colspan="2" valign="top" style="padding: 10px 20px">
+        <img
+          src="<%= companyLogoUrl %>"
+          alt="<%= companyName %>"
+          style="width: 150pt; margin-bottom: 30pt"
+        />
+
+        <div style="font-size: 15pt; font-weight: bold; color: #01548b">
+          <%= personName %>
+        </div>
+        <div style="font-size: 10.5pt; color: #000"><%= personRole %></div>
+      </td>
+    </tr>
+
+    <tr>
+      <td
+        colspan="2"
+        style="padding-top: 15pt; border-bottom: 1.5pt solid #01548b"
+      ></td>
+    </tr>
+
+    <tr
       style="
-        width: 600px;
-        border-collapse: collapse;
-        border-spacing: 0;
-        font-family: Verdana;
-        height: 95px;
-        background-color: #fff;
+        background-color: #01548b;
+        color: white;
+        font-size: 13.5pt;
+        font-weight: bold;
       "
     >
-      <tr style="height: 18px; background-color: #fff; font-size: 5%">
-        <td colspan="6" data-type="void" data-position="top" style="padding: 0">
-          &nbsp;
-        </td>
-      </tr>
-      <tr style="height: 95px">
-        <td
-          rowspan="3"
-          data-type="void"
-          data-position="top-left"
-          style="
-            height: 196px;
-            background-color: #fff;
-            width: 29px;
-            padding: 0;
-            font-size: 5%;
-          "
+      <td
+        colspan="2"
+        style="padding-top: 18pt; padding-bottom: 37.5pt; padding-left: 11.25pt"
+      >
+        <table
+          width="100%"
+          cellpadding="0"
+          cellspacing="0"
+          style="font-size: 10.5pt"
         >
-          &nbsp;
-        </td>
-        <!--Logo Azienda-->
-        <td
-          colspan="3"
-          data-type="logo"
-          style="
-            background-color: #fff;
-            padding: 0;
-            background-repeat: no-repeat;
-            background-image: url('<%= companyLogoUrl %>');
-          "
-        >
-          &nbsp;
-        </td>
+          <tbody>
+            <tr>
+              <td width="55%" valign="top" style="color: #fff">
+                <div style="display: flex; align-items: center; gap: 3.75pt">
+                  <img
+                    src="https://uxwing.com/wp-content/themes/uxwing/download/communication-chat-call/phone-call-white-icon.png"
+                    width="11.25pt"
+                  />
+                  <a href="tel:<%= personMobile %>" style="color: #fff">
+                    <%= personMobileFormatted %></a
+                  >
+                </div>
+                <br />
+                <div style="display: flex; align-items: center; gap: 3.75pt">
+                  <img
+                    src="https://uxwing.com/wp-content/themes/uxwing/download/communication-chat-call/phone-call-white-icon.png"
+                    width="11.25pt"
+                  />
+                  <a href="tel:<%= companyPhone %>" style="color: #fff">
+                    <%= companyPhoneFormatted %></a
+                  >
+                </div>
+                <br />
+                <div style="display: flex; align-items: center; gap: 3.75pt">
+                  <img
+                    src="https://uxwing.com/wp-content/themes/uxwing/download/location-travel-map/world-globe-white-icon.png"
+                    alt=""
+                    width="11.25pt"
+                  />
+                  <a href="<%= companyWebsite %>" style="color: #fff">
+                    <%= companyWebsite %></a
+                  >
+                </div>
+                <br />
+                <div style="display: flex; align-items: center; gap: 3.75pt">
+                  <img
+                    src="https://uxwing.com/wp-content/themes/uxwing/download/communication-chat-call/email-envelope-line-white-icon.png"
+                    alt=""
+                    width="11.25pt"
+                  />
+                  <a href="mailto:<%= personEmail %>" style="color: #fff">
+                    <%= personEmail %></a
+                  >
+                </div>
+              </td>
 
-        <td
-          rowspan="4"
-          data-type="photo"
-          style="
-            width: 220px;
-            height: 220px;
-            padding: 0;
-            background: linear-gradient(180deg, #fff 89%, <%= companyColor %> 11%);
-          "
-        ></td>
-        <td
-          rowspan="3"
-          data-type="void"
-          data-position="top-right"
-          style="
-            height: 196px;
-            background-color: #fff;
-            padding: 0;
-            background-color: #fff;
-            width: 29px;
-            font-size: 5%;
-          "
-        >
-          &nbsp;
-        </td>
-      </tr>
-      <tr style="height: 22px; background-color: #fff">
-        <!--Nome Persona-->
-        <td
-          colspan="3"
-          data-type="name"
-          style="padding: 0; font-size: 19px; font-weight: 600; color: <%= companyColor %>; text-transform: capitalize;"
-        >
-          <%= personName %>
-        </td>
-      </tr>
-      <tr style="height: 66px; background-color: #fff">
-        <!--Ruolo-->
-        <td
-          colspan="3"
-          data-type="role"
-          style="
-            padding: 0;
-            padding-top: 0.25rem;
-            font-size: 13px;
-            font-weight: 500;
-            vertical-align: top;
-          "
-        >
-          <%= personRole %>
-        </td>
-      </tr>
-      <tr style="height: 24px">
-        <td
-          rowspan="5"
-          data-type="void"
-          data-position="bottom-left"
-          style="
-            padding: 0;
-            background-color: <%= companyColor %>;
-            width: 29px;
-            font-size: 5%;
-          "
-        >
-          &nbsp;
-        </td>
-        <td
-          colspan="3"
-          data-type="void"
-          data-position="separator-h"
-          style="padding: 0; background-color: <%= companyColor %>; font-size: 5%"
-        >
-          &nbsp;
-        </td>
-        <td
-          rowspan="5"
-          data-type="void"
-          data-position="bottom-right"
-          style="
-            padding: 0;
-            background-color: <%= companyColor %>;
-            width: 29px;
-            font-size: 5%;
-          "
-        >
-          &nbsp;
-        </td>
-      </tr>
-      <tr style="background-color: <%= companyColor %>; color: #fff">
-        <!--Cellulare-->
-        <td
-          colspan="2"
-          data-type="mobile-phone"
-          style="
-            height: 23px;
-            padding: 0;
-            background-repeat: no-repeat;
-            background-image: url('https://meloria.com/wp-content/uploads/sites/2/2025/10/amico_icon_mobile003.png');
-            background-position: 0px 1px;
-            background-size: 21px auto;
-            font-size: 13px;
-            padding-left: 26px;
-          "
-        >
-          <a style="text-decoration: none; color: #fff" href="tel:<%= personMobile %>"
-            >+39 <%= personMobile%></a
-          >
-        </td>
-        <td
-          rowspan="4"
-          data-type="void"
-          data-position="separator-v"
-          style="
-            width: 50px;
-            padding: 0;
-            background-repeat: no-repeat;
-            background-image: url('https://meloria.com/wp-content/uploads/sites/2/2025/10/amico_separator.png');
-            background-position: center;
-            font-size: 5%;
-          "
-        >
-          &nbsp;
-        </td>
-        <!--Info Azienda-->
-        <td
-          rowspan="4"
-          data-type="company-info"
-          style="
-            padding: 0;
-            vertical-align: middle;
-            font-size: 14px;
-            color: #fff;
-          "
-        >
-          <span
-            style="
-              display: block;
-              margin: 0;
-              margin-bottom: 3px;
-              color: #fff !important;
-            "
-            ><%= companyName %></span
-          >
-          <span
-            style="
-              display: block;
-              margin: 0;
-              margin-bottom: 3px;
-              color: #fff !important;
-            "
-            > <%= companyAddress %> </span
-          >
-          <span
-            style="
-              display: block;
-              margin: 0;
-              margin-bottom: 3px;
-              color: #fff !important;
-            "
-            ><%= companyCap %> </span
-          >
-          <span style="display: block; margin: 0; color: #fff !important"
-            >VAT n&deg; <%= companyVat %></span
-          >
-        </td>
-      </tr>
-      <tr style="background-color: <%= companyColor %>; color: #fff; font-size: 13px">
-        <!--Tel. Azienda-->
-        <td
-          colspan="2"
-          data-type="office-phone"
-          style="
-            height: 23px;
-            padding: 0;
-            background-repeat: no-repeat;
-            background-image: url('https://meloria.com/wp-content/uploads/sites/2/2025/10/amico_icon_office003.png');
-            background-position: 0px 1px;
-            background-size: 21px auto;
-            padding-left: 26px;
-          "
-        >
-          <a style="text-decoration: none; color: #fff" href="tel:+39<%= companyPhone %>"
-            >+39 <%= companyPhone %></a
-          >
-        </td>
-      </tr>
-      <tr style="background-color: <%= companyColor %>; color: #fff; font-size: 13px">
-        <!--Sito Web-->
-        <td
-          colspan="2"
-          data-type="url"
-          style="
-            height: 23px;
-            padding: 0;
-            background-repeat: no-repeat;
-            background-image: url('https://meloria.com/wp-content/uploads/sites/2/2025/10/amico_icon_url003.png');
-            background-position: 0px 1px;
-            background-size: 21px auto;
-            padding-left: 26px;
-          "
-        >
-          <a
-            style="text-decoration: none; color: #fff"
-            href="<%= companyWebsite %>"
-            target="_blank"
-            ><%= companyWebsite %></a
-          >
-        </td>
-      </tr>
-      <tr style="background-color: <%= companyColor %>; color: #fff; font-size: 13px">
-        <!--Email Persona-->
-        <td
-          colspan="2"
-          data-type="email"
-          style="
-            height: 23px;
-            padding: 0;
-            background-repeat: no-repeat;
-            background-image: url('https://meloria.com/wp-content/uploads/sites/2/2025/10/amico_icon_email003.png');
-            background-position: 0px 1px;
-            background-size: 21px auto;
-            padding-left: 26px;
-          "
-        >
-          <a
-            style="text-decoration: none; color: #fff"
-            href="mailto:<%= personEmail %>"
-            target="_blank"
-            ><%= personEmail %></a
-          >
-        </td>
-      </tr>
-      <tr style="height: 50px; background-color: <%= companyColor %>; font-size: 5%">
-        <td
-          colspan="6"
-          data-type="void"
-          data-position="bottom"
-          style="padding: 0"
-        >
-          &nbsp;
-        </td>
-      </tr>
-    </table>
+              <td
+                width="45%"
+                valign="top"
+                style="
+                  padding-left: 15pt;
+                  border-left: 0.75pt solid #fff;
+                  line-height: 18.75pt;
+                  color: #fff;
+                "
+              >
+                <strong><%= companyName %></strong><br />
+                <%= companyAddress %><br />
+                <%= companyCap %><br />
+                VAT n° <%= companyVat %>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </td>
+    </tr>
+  </tbody>
+</table>
