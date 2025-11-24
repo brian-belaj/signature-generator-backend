@@ -28,7 +28,8 @@ app.post('/generate-signature/without-photo', (req, res) => {
     companyName,
     companyAddress,
     companyPhone,
-    companyWebsite
+    companyWebsite,
+    companyVatNumber
   } = req.body;
 
   res.render(
@@ -43,7 +44,8 @@ app.post('/generate-signature/without-photo', (req, res) => {
       companyName,
       companyAddress,
       companyPhone,
-      companyWebsite
+      companyWebsite,
+      companyVatNumber
     },
     (err, html) => {
       if (err) return res.status(500).json({ error: 'Error generating signature without photo', details: err.message });
@@ -65,7 +67,8 @@ app.post('/generate-signature/with-photo', (req, res) => {
     companyAddress,
     companyPhone,
     companyWebsite,
-    photoForegroundUrl
+    photoForegroundUrl,
+    companyVatNumber
   } = req.body;
 
   res.render(
@@ -81,7 +84,8 @@ app.post('/generate-signature/with-photo', (req, res) => {
       companyAddress,
       companyPhone,
       companyWebsite,
-      photoForegroundUrl
+      photoForegroundUrl,
+      companyVatNumber
     },
     (err, html) => {
       if (err) return res.status(500).json({ error: 'Error generating signature with photo', details: err.message });
