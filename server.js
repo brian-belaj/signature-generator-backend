@@ -27,6 +27,7 @@ app.post('/generate-signature/without-photo', (req, res) => {
     companyColor,
     companyName,
     companyAddress,
+    companyZip,
     companyPhone,
     companyWebsite,
     companyVatNumber
@@ -43,6 +44,7 @@ app.post('/generate-signature/without-photo', (req, res) => {
       companyColor,
       companyName,
       companyAddress,
+      companyZip,
       companyPhone,
       companyWebsite,
       companyVatNumber
@@ -65,6 +67,7 @@ app.post('/generate-signature/with-photo', (req, res) => {
     companyColor,
     companyName,
     companyAddress,
+    companyZip,
     companyPhone,
     companyWebsite,
     photoForegroundUrl,
@@ -82,6 +85,7 @@ app.post('/generate-signature/with-photo', (req, res) => {
       companyColor,
       companyName,
       companyAddress,
+      companyZip,
       companyPhone,
       companyWebsite,
       photoForegroundUrl,
