@@ -1,115 +1,115 @@
-<table
-  width="600pt"
-  cellpadding="0"
-  cellspacing="0"
-  style="font-family: Verdana; color: <%= companyColor %>"
->
-  <tbody>
-    <tr>
-      <!-- Logo + Name/Role -->
-      <td colspan="2" valign="top" style="padding: 10px 20px">
+<table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" width="480"
+  style="width:360.0pt;background:white;border-collapse:collapse;mso-yfti-tbllook:1184">
+
+  <tr style="height:16.0pt">
+    <td colspan="6" style="height:16.0pt"></td>
+  </tr>
+
+  <tr>
+    <td width="21" rowspan="2"></td>
+
+    <td width="329" colspan="4" style="padding:.75pt">
+      <a href="<%= companyWebsite %>">
         <img
           src="<%= companyLogoUrl %>"
           alt="<%= companyName %>"
-          style="width: 150pt; margin-bottom: 30pt"
+          width="175"
+          height="45"
+          style="display:block;border:0"
         />
+      </a>
+    </td>
 
-        <div style="font-size: 15pt; font-weight: bold; color: <%= companyColor %>">
+    <td width="21" rowspan="2"></td>
+  </tr>
+
+  <tr>
+    <td colspan="4" style="padding:.75pt">
+      <p style="margin:7.2pt 0 3.6pt 0">
+        <strong style="font-size:12.5pt;font-family:Verdana;color:<%= companyColor %>">
           <%= personName %>
-        </div>
-        <div style="font-size: 10.5pt; color: #000"><%= personRole %></div>
-      </td>
-    </tr>
+        </strong>
+      </p>
+      <p style="margin:3.6pt 0 18pt 0;font-size:9pt;font-family:Verdana">
+        <%= personRole %>
+      </p>
+    </td>
+  </tr>
 
-    <tr>
-      <td
-        colspan="2"
-        style="padding-top: 15pt; border-bottom: 1.5pt solid <%= companyColor %>"
-      ></td>
-    </tr>
+  <tr style="height:16.0pt">
+    <td colspan="6" style="background:<%= companyColor %>;height:16.0pt"></td>
+  </tr>
 
-    <tr
-      style="
-        background-color: <%= companyColor %>;
-        color: white;
-        font-size: 13.5pt;
-        font-weight: bold;
-      "
-    >
-      <td
-        colspan="2"
-        style="padding-top: 18pt; padding-bottom: 37.5pt; padding-left: 11.25pt"
-      >
-        <table
-          width="100%"
-          cellpadding="0"
-          cellspacing="0"
-          style="font-size: 10.5pt"
-        >
-          <tbody>
-            <tr>
-              <td width="55%" valign="top" style="color: #fff">
-                <div style="display: flex; align-items: center; gap: 3.75pt">
-                  <img
-                    src="https://uxwing.com/wp-content/themes/uxwing/download/communication-chat-call/phone-call-white-icon.png"
-                    width="11.25pt"
-                  />
-                  <a href="tel:<%= personMobile %>" style="color: #fff">
-                    <%= personMobile %></a
-                  >
-                </div>
-                <br />
-                <div style="display: flex; align-items: center; gap: 3.75pt">
-                  <img
-                    src="https://uxwing.com/wp-content/themes/uxwing/download/communication-chat-call/phone-call-white-icon.png"
-                    width="11.25pt"
-                  />
-                  <a href="tel:<%= companyPhone %>" style="color: #fff">
-                    <%= companyPhone %></a
-                  >
-                </div>
-                <br />
-                <div style="display: flex; align-items: center; gap: 3.75pt">
-                  <img
-                    src="https://uxwing.com/wp-content/themes/uxwing/download/location-travel-map/world-globe-white-icon.png"
-                    alt=""
-                    width="11.25pt"
-                  />
-                  <a href="<%= companyWebsite %>" style="color: #fff">
-                    <%= companyWebsite %></a
-                  >
-                </div>
-                <br />
-                <div style="display: flex; align-items: center; gap: 3.75pt">
-                  <img
-                    src="https://uxwing.com/wp-content/themes/uxwing/download/communication-chat-call/email-envelope-line-white-icon.png"
-                    alt=""
-                    width="11.25pt"
-                  />
-                  <a href="mailto:<%= personEmail %>" style="color: #fff">
-                    <%= personEmail %></a
-                  >
-                </div>
-              </td>
+  <!-- CONTATTI -->
+  <tr>
+    <td rowspan="4" style="background:<%= companyColor %>"></td>
 
-              <td
-                width="45%"
-                valign="top"
-                style="
-                  padding-left: 15pt;
-                  border-left: 0.75pt solid #fff;
-                  line-height: 18.75pt;
-                  color: #fff;
-                "
-              >
-                <strong><%= companyName %></strong><br />
-                <%= companyAddress %><br />
-                VAT: <%= companyVatNumber %>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </td>
-    </tr>
-  </tbody>
+    <td style="background:<%= companyColor %>">
+      <img src="https://uxwing.com/wp-content/themes/uxwing/download/communication-chat-call/phone-call-white-icon.png" width="15" />
+    </td>
+    <td style="background:<%= companyColor %>">
+      <span style="font-size:8pt;font-family:Verdana;color:white">
+        <%= personMobile %>
+      </span>
+    </td>
+
+    <td rowspan="4" style="background:<%= companyColor %>"></td>
+
+    <td style="background:<%= companyColor %>">
+      <span style="font-size:8pt;font-family:Verdana;color:white">
+        <%= companyName %>
+      </span>
+    </td>
+
+    <td rowspan="4" style="background:<%= companyColor %>"></td>
+  </tr>
+
+  <tr>
+    <td style="background:<%= companyColor %>">
+      <img src="https://uxwing.com/wp-content/themes/uxwing/download/communication-chat-call/phone-call-white-icon.png" width="15" />
+    </td>
+    <td style="background:<%= companyColor %>">
+      <span style="font-size:8pt;font-family:Verdana;color:white">
+        <%= companyPhone %>
+      </span>
+    </td>
+    <td style="background:<%= companyColor %>">
+      <span style="font-size:8pt;font-family:Verdana;color:white">
+        <%= companyAddress %>
+      </span>
+    </td>
+  </tr>
+
+  <tr>
+    <td style="background:<%= companyColor %>">
+      <img src="https://uxwing.com/wp-content/themes/uxwing/download/location-travel-map/world-globe-white-icon.png" width="15" />
+    </td>
+    <td style="background:<%= companyColor %>">
+      <a href="<%= companyWebsite %>" style="font-size:8pt;font-family:Verdana;color:white">
+        <%= companyWebsite %>
+      </a>
+    </td>
+    <td style="background:<%= companyColor %>">
+      <span style="font-size:8pt;font-family:Verdana;color:white">
+        VAT: <%= companyVatNumber %>
+      </span>
+    </td>
+  </tr>
+
+  <tr>
+    <td style="background:<%= companyColor %>">
+      <img src="https://uxwing.com/wp-content/themes/uxwing/download/communication-chat-call/email-envelope-line-white-icon.png" width="15" />
+    </td>
+    <td style="background:<%= companyColor %>">
+      <a href="mailto:<%= personEmail %>" style="font-size:8pt;font-family:Verdana;color:white">
+        <%= personEmail %>
+      </a>
+    </td>
+    <td style="background:<%= companyColor %>"></td>
+  </tr>
+
+  <tr style="height:16.0pt">
+    <td colspan="6" style="background:<%= companyColor %>;height:16.0pt"></td>
+  </tr>
+
 </table>
