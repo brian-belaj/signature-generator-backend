@@ -2,128 +2,242 @@
   width="600pt"
   cellpadding="0"
   cellspacing="0"
-  style="font-family: Verdana; color: <%= companyColor %>"
+  style="width:360.0pt;background:white;border-collapse:collapse;font-family:Verdana,sans-serif;color:<%= companyColor %>;"
 >
   <tbody>
+    <!-- Spazio top -->
     <tr>
-      <!-- Logo -->
-      <td width="135pt" valign="top" style="padding: 10px 20px">
-        <img
-          src="<%= companyLogoUrl %>"
-          alt="<%= companyName %>"
-          style="width: 150pt; margin-bottom: 30pt"
-        />
+      <td colspan="6" style="height:16pt;"></td>
+    </tr>
 
-        <div style="font-size: 15pt; font-weight: bold; color: <%= companyColor %>">
-          <%= personName %>
-        </div>
-        <div style="font-size: 10.5pt; color: #000"><%= personRole %></div>
+    <!-- Logo + Foto -->
+    <tr>
+      <td width="16pt"></td>
+
+      <!-- Logo -->
+      <td colspan="2" style="padding:4pt;">
+        <a href="<%= companyWebsite %>" style="text-decoration:none;">
+          <img
+            src="<%= companyLogoUrl %>"
+            alt="<%= companyName %>"
+            style="width:175pt;height:45pt;border:none;display:block;"
+          />
+        </a>
       </td>
 
-      <!-- Foto -->
-      <td width="150pt" align="right" valign="top" style="padding-right: 20px">
+      <td width="16pt"></td>
+
+      <!-- Foto profilo -->
+      <td width="97pt" valign="top" style="padding:4pt;text-align:center;">
         <img
           src="<%= photoForegroundUrl %>"
-          alt="Profile Photo"
+          alt="Profile photo"
           style="
-            width: 127.5pt;
-            height: 127.5pt;
-            border-radius: 50%;
-            border: 3.75pt solid <%= companyColor %>;
+            width:100px;
+            height:100px;
+            border-radius:50%;
+            border:3px solid <%= companyColor %>;
+            object-fit:cover;
           "
         />
       </td>
+
+      <td width="16pt"></td>
     </tr>
 
+    <!-- Nome e ruolo -->
     <tr>
+      <td></td>
+      <td colspan="2" style="padding:4pt;">
+        <p style="margin:7.2pt 0 3.6pt 0;">
+          <strong
+            style="font-size:12.5pt;font-family:Verdana,sans-serif;color:<%= companyColor %>;"
+          >
+            <%= personName %>
+          </strong>
+        </p>
+        <p style="margin:3.6pt 0 18pt 0;">
+          <span
+            style="font-size:9pt;font-family:Verdana,sans-serif;color:black;"
+          >
+            <%= personRole %>
+          </span>
+        </p>
+      </td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+
+    <!-- Riga separatore colore pieno -->
+    <tr>
+      <td colspan="6" style="background:<%= companyColor %>;height:16pt;"></td>
+    </tr>
+
+    <!-- Blocco contatti -->
+    <tr>
+      <!-- Bordo sinistra colore -->
       <td
-        colspan="2"
-        style="padding-top: 15pt; border-bottom: 1.5pt solid <%= companyColor %>"
+        rowspan="4"
+        style="width:16pt;background:<%= companyColor %>;"
+      ></td>
+
+      <!-- Icona mobile -->
+      <td style="background:<%= companyColor %>;padding:4pt 4pt 4pt 0;">
+        <img
+          src="https://meloria.com/wp-content/uploads/sites/2/2025/10/amico_icon_mobile003.png"
+          alt="Mobile"
+          style="width:15px;height:15px;display:block;"
+        />
+      </td>
+
+      <!-- Numero mobile -->
+      <td
+        style="width:200pt;background:<%= companyColor %>;padding:2pt 0;"
+      >
+        <span
+          style="font-size:8pt;font-family:Verdana,sans-serif;color:#ffffff;"
+        >
+          <a
+            href="tel:<%= personMobile %>"
+            style="color:#ffffff;text-decoration:none;"
+          >
+            <%= personMobile %>
+          </a>
+        </span>
+      </td>
+
+      <!-- Separatore verticale -->
+      <td
+        rowspan="4"
+        style="width:16pt;background:<%= companyColor %>;text-align:center;"
+      >
+        <img
+          src="https://meloria.com/wp-content/uploads/sites/2/2026/01/white-separator.png"
+          alt=""
+          style="width:1px;height:60px;display:block;"
+        />
+      </td>
+
+      <!-- Nome azienda -->
+      <td style="background:<%= companyColor %>;padding:2pt 0;">
+        <span
+          style="font-size:8pt;font-family:Verdana,sans-serif;color:#ffffff;"
+        >
+          <%= companyName %>
+        </span>
+      </td>
+
+      <td
+        rowspan="4"
+        style="width:16pt;background:<%= companyColor %>;"
       ></td>
     </tr>
 
-    <tr
-      style="
-        background-color: <%= companyColor %>;
-        color: white;
-        font-size: 13.5pt;
-        font-weight: bold;
-      "
-    >
-      <td
-        colspan="2"
-        style="padding-top: 18pt; padding-bottom: 37.5pt; padding-left: 11.25pt"
-      >
-        <table
-          width="100%"
-          cellpadding="0"
-          cellspacing="0"
-          style="font-size: 10.5pt"
-        >
-          <tbody>
-            <tr>
-              <td width="55%" valign="top" style="color: #fff">
-                <div style="display: flex; align-items: center; gap: 3.75pt">
-                  <img
-                    src="https://uxwing.com/wp-content/themes/uxwing/download/communication-chat-call/phone-call-white-icon.png"
-                    width="11.25pt"
-                  />
-                  <a href="tel:<%= personMobile %>" style="color: #fff">
-                    <%= personMobile %></a
-                  >
-                </div>
-                <br />
-                <div style="display: flex; align-items: center; gap: 3.75pt">
-                  <img
-                    src="https://uxwing.com/wp-content/themes/uxwing/download/communication-chat-call/phone-call-white-icon.png"
-                    width="11.25pt"
-                  />
-                  <a href="tel:<%= companyPhone %>" style="color: #fff">
-                    <%= companyPhone %></a
-                  >
-                </div>
-                <br />
-                <div style="display: flex; align-items: center; gap: 3.75pt">
-                  <img
-                    src="https://uxwing.com/wp-content/themes/uxwing/download/location-travel-map/world-globe-white-icon.png"
-                    alt=""
-                    width="11.25pt"
-                  />
-                  <a href="<%= companyWebsite %>" style="color: #fff">
-                    <%= companyWebsite %></a
-                  >
-                </div>
-                <br />
-                <div style="display: flex; align-items: center; gap: 3.75pt">
-                  <img
-                    src="https://uxwing.com/wp-content/themes/uxwing/download/communication-chat-call/email-envelope-line-white-icon.png"
-                    alt=""
-                    width="11.25pt"
-                  />
-                  <a href="mailto:<%= personEmail %>" style="color: #fff">
-                    <%= personEmail %></a
-                  >
-                </div>
-              </td>
-
-              <td
-                width="45%"
-                valign="top"
-                style="
-                  padding-left: 15pt;
-                  border-left: 0.75pt solid #fff;
-                  line-height: 18.75pt;
-                  color: #fff;
-                "
-              >
-                <strong><%= companyName %></strong><br />
-                <%= companyAddress %><br />
-                VAT: <%= companyVatNumber %>
-              </td>
-            </tr>
-          </tbody>
-        </table>
+    <!-- Telefono ufficio + indirizzo -->
+    <tr>
+      <!-- Icona telefono ufficio -->
+      <td style="background:<%= companyColor %>;padding:4pt 4pt 4pt 0;">
+        <img
+          src="https://meloria.com/wp-content/uploads/sites/2/2025/10/amico_icon_office003.png"
+          alt="Office"
+          style="width:15px;height:15px;display:block;"
+        />
       </td>
+
+      <!-- Numero telefono ufficio -->
+      <td
+        style="width:200pt;background:<%= companyColor %>;padding:2pt 0;"
+      >
+        <span
+          style="font-size:8pt;font-family:Verdana,sans-serif;color:#ffffff;"
+        >
+          <a
+            href="tel:<%= companyPhone %>"
+            style="color:#ffffff;text-decoration:none;"
+          >
+            <%= companyPhone %>
+          </a>
+        </span>
+      </td>
+
+      <!-- Indirizzo azienda (prima riga) -->
+      <td style="background:<%= companyColor %>;padding:2pt 0;">
+        <span
+          style="font-size:8pt;font-family:Verdana,sans-serif;color:#ffffff;"
+        >
+          <%= companyAddress %>
+        </span>
+      </td>
+    </tr>
+
+    <!-- Website + (eventuale seconda parte indirizzo se la spezzetti) -->
+    <tr>
+      <!-- Icona web -->
+      <td style="background:<%= companyColor %>;padding:4pt 4pt 4pt 0;">
+        <img
+          src="https://meloria.com/wp-content/uploads/sites/2/2025/10/amico_icon_url003.png"
+          alt="Website"
+          style="width:15px;height:15px;display:block;"
+        />
+      </td>
+
+      <!-- URL sito -->
+      <td
+        style="width:200pt;background:<%= companyColor %>;padding:2pt 0;"
+      >
+        <span style="font-size:8pt;font-family:Verdana,sans-serif;">
+          <a
+            href="<%= companyWebsite %>"
+            style="color:#ffffff;text-decoration:none;"
+          >
+            <%= companyWebsite %>
+          </a>
+        </span>
+      </td>
+
+      <!-- (qui potresti mettere una seconda riga indirizzo se vuoi spezzarlo) -->
+      <td style="background:<%= companyColor %>;padding:2pt 0;"></td>
+    </tr>
+
+    <!-- Email personale + VAT -->
+    <tr>
+      <!-- Icona email -->
+      <td style="background:<%= companyColor %>;padding:4pt 4pt 4pt 0;">
+        <img
+          src="https://meloria.com/wp-content/uploads/sites/2/2025/10/amico_icon_email003.png"
+          alt="Email"
+          style="width:15px;height:15px;display:block;"
+        />
+      </td>
+
+      <!-- Email personale -->
+      <td
+        style="width:200pt;background:<%= companyColor %>;padding:2pt 0;"
+      >
+        <span style="font-size:8pt;font-family:Verdana,sans-serif;">
+          <a
+            href="mailto:<%= personEmail %>"
+            style="color:#ffffff;text-decoration:none;"
+          >
+            <%= personEmail %>
+          </a>
+        </span>
+      </td>
+
+      <!-- VAT -->
+      <td style="background:<%= companyColor %>;padding:2pt 0;">
+        <span
+          style="font-size:8pt;font-family:Verdana,sans-serif;color:#ffffff;"
+        >
+          VAT: <%= companyVatNumber %>
+        </span>
+      </td>
+    </tr>
+
+    <!-- Riga colore fondo -->
+    <tr>
+      <td colspan="6" style="background:<%= companyColor %>;height:16pt;"></td>
     </tr>
   </tbody>
 </table>
